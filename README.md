@@ -5,11 +5,21 @@
 
 ---
 
+## Executive Summary
+
+Sustayn is a decision-support tool for managers who allocate people to projects and tasks. It combines **skill fit**, **current workload**, and an **illustrative attrition-risk signal** so that the most capable employee does not automatically become the most overloaded employee.
+
+The commercial case is simple: [Gallup estimates](https://www.gallup.com/workplace/646538/employee-turnover-preventable-often-ignored.aspx) that replacing a technical professional costs about **80% of salary**, while replacing a manager or leader costs about **200%**. For a technical employee earning $75,000, one departure can represent roughly **$60,000 in replacement cost**. At an illustrative SaaS price of $5 per employee per month, a 200-person customer would spend $12,000 per year; if Sustayn contributed to avoiding just one such departure, that would represent a potential **5× benefit-to-cost ratio**.
+
+Sustayn does not automate employment decisions or claim to predict resignations with certainty. It gives managers a transparent recommendation, exposes every scoring component, and keeps the final decision with a human.
+
+---
+
 ## Problem Statement
 
 Managers assign work based on memory and availability, not on a systematic view of skill fit or sustainability. The best, most visible performers become the default assignee for every new task — quietly accumulating workload and burnout risk that nobody tracks until they resign.
 
-Replacing an employee costs **50–200% of their annual salary** (Gallup, SHRM). Voluntary turnover costs U.S. businesses an estimated **$1 trillion per year**. A large share of that is preventable — driven by exactly this kind of invisible over-allocation, not compensation.
+This is an expensive management problem. Gallup estimates that replacing a frontline employee costs about **40% of salary**, a technical professional **80%**, and a manager or leader **200%**. Gallup also found that **42% of voluntary departures were preventable**; among preventable leavers, day-to-day management issues included staffing and workload concerns. ([Gallup, 2024; updated 2026](https://www.gallup.com/workplace/646538/employee-turnover-preventable-often-ignored.aspx))
 
 **The gap:** organisations have skill data (who can do what) and attrition-risk signals (who's likely to leave) sitting in separate systems, and nobody combines them at the moment a resourcing decision is actually made.
 
@@ -23,6 +33,16 @@ Sustayn is an AI-powered resourcing assistant that recommends who should take on
 2. **Sustainability** — who has headroom, and who is already over-allocated and at elevated attrition risk
 
 Instead of a single ranked name, it returns a **reasoned recommendation** — including cases where it deliberately recommends *against* the top skill match because assigning them would compound an existing risk — and a team-level view that surfaces employees who have quietly become the "default assignee" for repeated tasks.
+
+### Why Now
+
+Enterprises are already building structured skills foundations. For example, [SAP's Talent Intelligence Hub](https://help.sap.com/docs/successfactors-platform/using-talent-intelligence-hub/talent-intelligence-hub) centralises employee skills and connects them with internal opportunities. Project-management systems already hold workload and assignment data. Sustayn's opportunity is to become the **decision layer between those systems**: joining skills, capacity, and retention signals at the moment work is allocated.
+
+```text
+HR and skills systems  ─┐
+Project/workload tools ─┼─> Sustayn recommendation ─> Human manager decision
+People analytics       ─┘
+```
 
 ---
 
@@ -152,12 +172,66 @@ Sustayn addresses the challenge by making invisible over-allocation visible at t
 
 ## Business Case
 
-Worked example for a 200-person organisation (average salary $75K, 15% annual voluntary turnover):
+### Initial Customer
 
-- 30 departures/year × 50% of salary (low estimate) = **~$1.1M/year** in replacement cost
-- If even 15% of those departures were preventable over-allocation cases, that's a plausible **~$165K/year** Sustayn could help avoid
+The initial target is a **200–1,000-person project-based organisation** where managers frequently allocate scarce specialists across competing work: consulting firms, technology and product organisations, engineering teams, agencies, and clinical-research operations.
 
-These are illustrative, sourced estimates (Gallup, SHRM) — not a guaranteed outcome.
+- **Economic buyer:** COO, Head of Resource Management, or professional-services leader
+- **Co-owner:** HR or People Analytics
+- **Primary user:** project, delivery, and resource managers
+- **Initial job to be done:** staff work quickly without repeatedly loading the same high performers
+
+### Illustrative Unit Economics
+
+Worked example for a 200-person organisation and one technical employee earning $75,000:
+
+| Item | Calculation | Value |
+|---|---:|---:|
+| Cost to replace one technical employee | $75,000 × 80% | **$60,000** |
+| Illustrative annual Sustayn subscription | 200 × $5 × 12 months | **$12,000** |
+| Potential benefit if one departure is avoided | $60,000 ÷ $12,000 | **5×** |
+
+This is a scenario, not a guaranteed return. Attrition has many causes, and a production pilot should not claim sole causation. The commercially testable proposition is whether Sustayn reduces risky allocation decisions and improves workload distribution enough to contribute to retention.
+
+### Route to Market
+
+1. Run a **4–6 week pilot** in one department with 50–200 employees.
+2. Import skills from an HR system and workload from a project-management system.
+3. Keep every recommendation human-reviewed and record overrides.
+4. Measure leading indicators before attempting to measure long-term attrition.
+5. Expand to other departments after demonstrating operational value.
+
+Pilot success metrics:
+
+- Percentage of new assignments given to already overloaded employees
+- Change in workload concentration across the team
+- Time required to identify qualified, available candidates
+- Recommendation acceptance and manager override rates
+- Number of danger-zone assignments flagged or prevented
+- Employee-reported workload fairness
+
+### Integration Roadmap
+
+- **HR and skills:** Workday, SAP SuccessFactors, or CSV/API import
+- **Work management:** Jira, Asana, Monday.com, or professional-services automation tools
+- **Workflow:** recommendations delivered through the web app, Slack, or Microsoft Teams
+- **Governance:** role-based access, audit logs, employee data correction, and model monitoring
+
+---
+
+## Responsible Deployment
+
+Employee-management AI requires more than model accuracy. The [EU AI Act identifies certain AI systems used for worker management and task allocation as high-risk](https://ai-act-service-desk.ec.europa.eu/en/ai-act/recital-57). A production version of Sustayn should therefore be designed around:
+
+- **Human oversight:** the system recommends; a manager decides and can override
+- **Transparency:** skill fit, availability, penalties, and final scores remain visible
+- **Data minimisation:** use only relevant, authorised workforce data
+- **Contestability:** employees can review and correct skills or workload information
+- **Fairness testing:** monitor outcomes across protected groups before deployment
+- **Traceability:** log inputs, model version, recommendation, explanation, and final decision
+- **Appropriate access:** individual attrition predictions should be restricted to authorised HR users; managers can receive actionable capacity guidance instead of a blunt “likely to leave” label
+
+These controls are not an afterthought: they are necessary for buyer trust, employee adoption, and enterprise viability.
 
 ---
 
