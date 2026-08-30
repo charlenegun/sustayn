@@ -138,7 +138,6 @@ IBM Bob was used throughout every phase of this build:
 7. **Explanation prompt engineering** — Bob designed and iterated the Claude Haiku (AWS Bedrock) prompt in `explanation_layer.py` to explicitly narrate the "bypassed top match" case when it occurs, and added a rule-based fallback so the app never crashes when credentials are unavailable
 8. **React frontend** — Bob scaffolded the full React + Vite + Tailwind CSS frontend with three pages (Dashboard, Recommendations, Team Overview), the displaced-top-match warning banner, colour-coded risk/workload indicators, interactive score breakdown, and all API integration
 9. **Architecture decisions** — Bob recommended replacing Streamlit with React for competition-quality polish, designed the FastAPI static-file serving pattern so both API and frontend run on one port, and debugged the AWS Bedrock model ID to the correct `us.anthropic.claude-haiku-4-5-20251001-v1:0`
-10. **Documentation** — Bob wrote this README, the demo script, and the full build plan
 
 ---
 
@@ -167,17 +166,6 @@ These are illustrative, sourced estimates (Gallup, SHRM) — not a guaranteed ou
 - **Attrition model is illustrative, not validated.** It is trained on IBM's synthetic/illustrative dataset and should be treated as a proof-of-concept methodology, not a production-grade risk model.
 - **Skills and workload data are synthetic overlays.** The IBM dataset contains no skills field or live workload data. These were constructed deliberately and transparently for the demo.
 - **Scoring formula is intentionally simple.** The conditional risk-penalty logic is the key design decision — a judge asking "isn't this just weighted sorting?" can be answered by explaining that the penalty only fires on the compound condition, not either factor alone.
-
----
-
-## Submission Checklist
-
-- [x] Working prototype built primarily with IBM Bob
-- [ ] Completed required IBM SkillsBuild learning activity
-- [x] Public GitHub repo with README meeting challenge structure
-- [ ] Project page submitted on challenge platform
-- [ ] Public demo video (max 3 minutes) — see `video/demo_link.md`
-- [ ] Submitted by 11:59pm ET on the deadline date
 
 ---
 
