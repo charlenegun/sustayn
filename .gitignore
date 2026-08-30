@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+data/raw/
+.DS_Store
+.ipynb_checkpoints/
+model/attrition_model.pkl
+frontend_react/node_modules/
+frontend_react/dist/
+.pytest_cache/

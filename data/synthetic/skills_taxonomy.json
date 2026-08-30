@@ -1,0 +1,29 @@
+{
+  "Sales Executive": {
+    "skills": ["negotiation", "CRM", "client communication", "pipeline management", "B2B sales"]
+  },
+  "Research Scientist": {
+    "skills": ["data analysis", "scientific writing", "experiment design", "statistical modeling", "literature review"]
+  },
+  "Laboratory Technician": {
+    "skills": ["lab procedures", "data collection", "equipment calibration", "quality control", "documentation"]
+  },
+  "Manufacturing Director": {
+    "skills": ["operations management", "process optimization", "supply chain", "team leadership", "budget management"]
+  },
+  "Healthcare Representative": {
+    "skills": ["client communication", "medical knowledge", "CRM", "territory management", "compliance"]
+  },
+  "Manager": {
+    "skills": ["team leadership", "performance management", "budget management", "stakeholder communication", "project planning"]
+  },
+  "Sales Representative": {
+    "skills": ["negotiation", "CRM", "client communication", "prospecting", "product knowledge"]
+  },
+  "Research Director": {
+    "skills": ["research strategy", "scientific writing", "team leadership", "budget management", "stakeholder communication"]
+  },
+  "Human Resources": {
+    "skills": ["recruiting", "employee relations", "performance management", "HR compliance", "onboarding"]
+  }
+}

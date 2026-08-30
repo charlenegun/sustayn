@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+aiofiles
+scikit-learn
+pandas
+numpy
+python-dotenv
+joblib
+imbalanced-learn
+matplotlib
+seaborn
+ipykernel
+notebook
+requests
+pytest

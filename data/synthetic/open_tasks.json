@@ -1,0 +1,146 @@
+[
+  {
+    "task_id": "T001",
+    "title": "Lead Q3 enterprise sales pitch to new APAC accounts",
+    "required_skills": ["negotiation", "client communication", "B2B sales"],
+    "urgency": 3,
+    "effort": 20,
+    "description": "Prepare and deliver a tailored enterprise sales pitch to three new APAC accounts. Requires strong negotiation and executive-level communication."
+  },
+  {
+    "task_id": "T002",
+    "title": "Analyse clinical trial data and write summary report",
+    "required_skills": ["data analysis", "scientific writing", "statistical modeling"],
+    "urgency": 2,
+    "effort": 30,
+    "description": "Process and analyse results from the latest clinical trial dataset, produce a summary report suitable for internal stakeholders and external publication."
+  },
+  {
+    "task_id": "T003",
+    "title": "Calibrate and validate new PCR equipment batch",
+    "required_skills": ["lab procedures", "equipment calibration", "quality control"],
+    "urgency": 3,
+    "effort": 12,
+    "description": "Carry out full calibration and validation protocol on the new PCR equipment batch before it enters production use."
+  },
+  {
+    "task_id": "T004",
+    "title": "Redesign production line workflow to reduce bottleneck",
+    "required_skills": ["process optimization", "operations management", "supply chain"],
+    "urgency": 2,
+    "effort": 40,
+    "description": "Identify and eliminate the primary throughput bottleneck in the manufacturing workflow using lean principles."
+  },
+  {
+    "task_id": "T005",
+    "title": "Coordinate compliance audit for healthcare territory",
+    "required_skills": ["compliance", "medical knowledge", "territory management"],
+    "urgency": 3,
+    "effort": 16,
+    "description": "Organise and manage a compliance audit across the assigned healthcare territory, liaising with regulatory contacts."
+  },
+  {
+    "task_id": "T006",
+    "title": "Conduct quarterly performance reviews for R&D team",
+    "required_skills": ["performance management", "team leadership", "stakeholder communication"],
+    "urgency": 2,
+    "effort": 24,
+    "description": "Facilitate structured performance review sessions for all direct reports in the R&D department, documenting outcomes and development plans."
+  },
+  {
+    "task_id": "T007",
+    "title": "Onboard and train five new sales hires",
+    "required_skills": ["onboarding", "product knowledge", "CRM"],
+    "urgency": 2,
+    "effort": 20,
+    "description": "Deliver a structured onboarding programme for the incoming sales cohort, covering CRM setup, product training, and call shadowing."
+  },
+  {
+    "task_id": "T008",
+    "title": "Design experiment for new compound efficacy study",
+    "required_skills": ["experiment design", "scientific writing", "data analysis"],
+    "urgency": 1,
+    "effort": 35,
+    "description": "Develop the full experimental protocol for evaluating efficacy of the new compound, including controls, sample sizing, and analysis plan."
+  },
+  {
+    "task_id": "T009",
+    "title": "Build budget forecast model for next fiscal year",
+    "required_skills": ["budget management", "stakeholder communication", "project planning"],
+    "urgency": 3,
+    "effort": 28,
+    "description": "Construct a detailed bottom-up budget forecast model incorporating headcount, capex, and operational costs for board presentation."
+  },
+  {
+    "task_id": "T010",
+    "title": "Resolve employee relations complaint",
+    "required_skills": ["employee relations", "HR compliance", "performance management"],
+    "urgency": 3,
+    "effort": 10,
+    "description": "Investigate and resolve a formal employee relations complaint in line with policy and legal requirements, documenting findings."
+  },
+  {
+    "task_id": "T011",
+    "title": "Optimise CRM pipeline reporting for sales leadership",
+    "required_skills": ["CRM", "pipeline management", "B2B sales"],
+    "urgency": 1,
+    "effort": 14,
+    "description": "Audit and improve the CRM pipeline reporting setup, ensuring sales leadership gets accurate, real-time visibility into deal stages."
+  },
+  {
+    "task_id": "T012",
+    "title": "Prepare regulatory submission documentation package",
+    "required_skills": ["scientific writing", "compliance", "documentation"],
+    "urgency": 3,
+    "effort": 45,
+    "description": "Compile and format the complete documentation package required for the upcoming regulatory submission, coordinating with lab and legal."
+  },
+  {
+    "task_id": "T013",
+    "title": "Lead supply chain resilience review after Q2 disruptions",
+    "required_skills": ["supply chain", "process optimization", "operations management"],
+    "urgency": 2,
+    "effort": 32,
+    "description": "Conduct a structured post-mortem on Q2 supply chain disruptions and produce a resilience improvement plan with concrete action items."
+  },
+  {
+    "task_id": "T014",
+    "title": "Develop a recruiting campaign for laboratory roles",
+    "required_skills": ["recruiting", "onboarding", "HR compliance"],
+    "urgency": 1,
+    "effort": 18,
+    "description": "Design and launch a targeted recruiting campaign for open laboratory technician and research scientist positions, including job postings, screening criteria, and interview process."
+  },
+  {
+    "task_id": "T015",
+    "title": "Present research roadmap to executive leadership",
+    "required_skills": ["research strategy", "stakeholder communication", "scientific writing"],
+    "urgency": 2,
+    "effort": 20,
+    "description": "Prepare and deliver a 12-month research roadmap presentation for the executive leadership team, aligning research priorities with company strategy."
+  },
+  {
+    "task_id": "T016",
+    "title": "Train sales team on new product line features",
+    "required_skills": ["product knowledge", "client communication", "CRM"],
+    "urgency": 2,
+    "effort": 15,
+    "description": "Design and deliver a training session for the sales team on the new product line, including competitive positioning and demo scripts."
+  },
+  {
+    "task_id": "T017",
+    "title": "Review and improve lab documentation procedures",
+    "required_skills": ["documentation", "quality control", "lab procedures"],
+    "urgency": 1,
+    "effort": 22,
+    "description": "Audit existing laboratory documentation practices against ISO standards and implement improvements to close identified gaps."
+  },
+  {
+    "task_id": "T018",
+    "title": "Negotiate revised supplier contract for key materials",
+    "required_skills": ["negotiation", "supply chain", "budget management"],
+    "urgency": 3,
+    "effort": 25,
+    "description": "Lead renegotiation of the primary materials supplier contract ahead of expiry, targeting improved pricing and delivery terms."
+  }
+]
