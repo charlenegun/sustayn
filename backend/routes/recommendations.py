@@ -1,5 +1,5 @@
 """
-backend/routes/recommendations.py — POST /recommendations/{task_id}
+backend/routes/recommendations.py — GET /recommendations/{task_id}
 """
 
 from fastapi import APIRouter, HTTPException, Request
@@ -13,7 +13,7 @@ router = APIRouter()
 @router.get("/recommendations/{task_id}")
 def get_recommendations(task_id: str, request: Request):
     """
-    Return ranked top-3 candidates for a given task, with a GPT-4o explanation.
+    Return ranked top-3 candidates for a given task, with a Claude Haiku explanation.
     """
     tasks = request.app.state.tasks
     employees_df = request.app.state.employees

@@ -110,7 +110,8 @@ pip install -r requirements.txt
 
 # Configure your AWS credentials
 cp .env.example .env
-# Edit .env and add your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
+# Edit .env and set AWS_BEARER_TOKEN_BEDROCK to your long-term Bedrock bearer token
+# AWS_REGION defaults to us-east-1 — change if your Bedrock access is in another region
 ```
 
 ### Train the model (run once)
@@ -240,6 +241,12 @@ These controls are not an afterthought: they are necessary for buyer trust, empl
 - **Attrition model is illustrative, not validated.** It is trained on IBM's synthetic/illustrative dataset and should be treated as a proof-of-concept methodology, not a production-grade risk model.
 - **Skills and workload data are synthetic overlays.** The IBM dataset contains no skills field or live workload data. These were constructed deliberately and transparently for the demo.
 - **Scoring formula is intentionally simple.** The conditional risk-penalty logic is the key design decision — a judge asking "isn't this just weighted sorting?" can be answered by explaining that the penalty only fires on the compound condition, not either factor alone.
+
+---
+
+## Demo Video
+
+[▶ Watch the 3-minute demo](https://drive.google.com/file/d/1c7hA4YQPmBc7dVtJXoDHXGVZExOpJ37E/view?usp=sharing)
 
 ---
 
