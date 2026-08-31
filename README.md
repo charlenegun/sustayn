@@ -48,6 +48,14 @@ People analytics       ─┘
 
 ## AI Approach & Architecture
 
+AI is core to Sustayn in two specific places: a **trained classifier** scores attrition risk from IBM's real HR data, and an **LLM generates the plain-English reasoning** behind every recommendation. The matching engine's scoring logic is deterministic and sits *between* the two — combining the model's output with availability constraints. This means the matching engine is not itself AI; it is the business logic that translates two AI outputs into a concrete, explainable decision.
+
+| Component | Type | Role |
+|---|---|---|
+| Attrition-risk model | **ML classifier** (logistic regression) | Produces the risk score every recommendation depends on — remove this and the product has nothing to recommend against |
+| Matching engine | **Deterministic formula** | Combines the risk score with skill fit and availability; transparent, auditable, not a black box |
+| Explanation layer | **LLM** (Claude Haiku, AWS Bedrock) | Generates the plain-English "why" — including the bypass case — from the ranked scores |
+
 ![Architecture Diagram](docs/architecture_diagram.svg)
 
 ### Scoring Formula
@@ -159,6 +167,7 @@ IBM Bob was used throughout every phase of this build:
 7. **Explanation prompt engineering** — Bob designed and iterated the Claude Haiku (AWS Bedrock) prompt in `explanation_layer.py` to explicitly narrate the "bypassed top match" case when it occurs, and added a rule-based fallback so the app never crashes when credentials are unavailable
 8. **React frontend** — Bob scaffolded the full React + Vite + Tailwind CSS frontend with three pages (Dashboard, Recommendations, Team Overview), the displaced-top-match warning banner, colour-coded risk/workload indicators, interactive score breakdown, and all API integration
 9. **Architecture decisions** — Bob recommended replacing Streamlit with React for competition-quality polish, designed the FastAPI static-file serving pattern so both API and frontend run on one port, and debugged the AWS Bedrock model ID to the correct `us.anthropic.claude-haiku-4-5-20251001-v1:0`
+10. **Documentation** — Bob wrote this README, the architecture diagram, the demo script, and the full build plan
 
 ---
 
@@ -168,6 +177,8 @@ IBM Bob was used throughout every phase of this build:
 Category: Decision Intelligence / Operations & Productivity
 
 Sustayn addresses the challenge by making invisible over-allocation visible at the exact moment a resourcing decision is made — combining skill fit and attrition-risk signals that are normally kept separate.
+
+A production version of Sustayn would naturally integrate with **IBM watsonx.ai** for the explanation and reasoning layer, and **IBM OpenScale / Watson OpenPages** for model monitoring and governance — ensuring the attrition risk model is auditable, fair, and explainable in an enterprise context.
 
 ---
 
